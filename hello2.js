@@ -1,7 +1,7 @@
 var http =require('http');
 var fs =require('fs');
 var url=require('url');
-
+const port=process.env.port ||5000
 http.createServer(function(req,res){
     var q=url.parse(req.url,true);
     var filename="."+q.pathname;
